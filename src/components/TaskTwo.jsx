@@ -1,5 +1,6 @@
 import React , { useState } from 'react'
-
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
 const TaskTwo = () => {
     const [inputValue, setInputValue] = useState('');
     const [error, setError] = useState(false);
@@ -21,8 +22,8 @@ const TaskTwo = () => {
     }; 
     return (
       <div>
-        <input type="text" value={inputValue} onChange={handleInputChange} />
-        <button onClick={handleAddClick} disabled={error}>Add</button>
+        <TextField type="text" value={inputValue} onChange={handleInputChange} /><br />
+        <Button variant="contained" onClick={handleAddClick} disabled={error}>Add</Button>
         {error && <p style={{ color: 'red' }}>Uzunluğu 5-dən boyuk və ya beraber ve input-da böyük hərf simvolu olmalidir!</p>}
         <ul>
           {listItems.map((item, index) => (

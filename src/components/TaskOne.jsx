@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Button from '@mui/material/Button';
 function ColorToggle() {
   const [bgColor, setBgColor] = useState("gray");
 
@@ -9,7 +10,7 @@ function ColorToggle() {
   return (
     <>
       <div style={{width: "100px",height: "100px",backgroundColor: bgColor}}></div>
-      <button onClick={toggleColor}>click</button>
+      <Button variant="contained" onClick={toggleColor}>click</Button>
     </>
   );
 }
